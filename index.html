@@ -138,7 +138,7 @@ href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 		border-radius: 60%;
 		width: 40%;
 		height: 12%;
-		margin-left: 30%;
+		margin-left: 5%;
 		font-size: 20px;
 		color: black;
 		background: white;
@@ -187,8 +187,48 @@ href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 			color: black;
 			background: darkorange;
 		}
+		div#alerta
+		{
+			margin: 10px;
+			padding: 5px;
+		}
+		h3.english
+		{
+			background: white;
+			color: black;
+		}
+		h3.spanish
+		{
+			background: white;
+			color: black;
+		}
 </style>
 <body>
+	<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Success!</strong> Welcome to Systems, Inc
+</div>
+<div class="alert1">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Info!</strong> Hello user, we regret to inform you that the services of Systems, Inc and Facebook mentor will end on June 1, 2020, so this website will stop working.
+The reason for temporarily closing this website is due to the acquisition of System, Inc by a private company.
+Thanks for your attention.
+</div>
+	<div id="alerta">
+		<h2 style="text-align: center;">Information about Systems, Inc and changes made.</h2>
+		<p>
+		<img src="https://cdn3.iconfinder.com/data/icons/50-flags-of-the-world-circular-shape-2/60/Circular_world_Flag_145-512.png" style="width: 5%; height: 5%; margin: 2px; padding: 3px;" align="left">
+		<h3 class="english">Hello user, we regret to inform you that the services of Systems, Inc and Facebook mentor will end on June 1, 2020, so this website will stop working.
+The reason for temporarily closing this website is due to the acquisition of System, Inc by a private company.
+Thanks for your attention.</h3>
+</p>
+<p>
+<img src="https://cdn.countryflags.com/thumbs/spain/flag-round-250.png" style="width: 5%; height: 5%; margin: 2px; padding: 3px;" align="left">
+<h3 class="spanish">Hola usuario, lamentamos informarle que los servicios de Systems, Inc y mentor de Facebook se finaliará el 1 de Junio 2020, por lo cual está página web dejará de funcionar.
+La razón de cerrar temporalmente este sitio web se debe a la adquisición de System, Inc por una empresa privada.
+Gracias por su atención.</h3>
+</p>
+	</div>
 <div id="logo">
 	<i class="fas fa-tv"></i><i class="fas fa-mobile-alt"></i><a href="#" class="logo">Systems, Inc</a>
 	<a href="#" class="html">HTML</a>
@@ -233,7 +273,42 @@ HTML is easy to learn - You will enjoy it!
 <h2>More tutorials will be uploaded soon, thanks for your attention.</h2>
 <header class="javm">Systems, Inc</header>
 <a href="#" class="javm1">JAVM</a>
+<h4>Owner:</h4>
 <a href="#" class="javm1">Javier V.</a>
 
 </body>
+<script type="text/javascript">
+	alert("Systems, Inc Hello user, we regret to inform you that the services of Systems, Inc and Facebook mentor will end on June 1, 2020.");
+	alert("Hola usuario, lamentamos informarle que los servicios de Systems, Inc y mentor de Facebook se finaliará el 1 de Junio 2020, por lo cual está página web dejará de funcionar. La razón de cerrar temporalmente este sitio web se debe a la adquisición de System, Inc por una empresa privada. Gracias por su atención.");
+	console.log("Systems, Inc Hello user, we regret to inform you that the services of Systems, Inc and Facebook mentor will end on June 1, 2020.")
+	console.log("Systems, Inc");
+</script>
+<style type="text/css">
+	.alert {
+  padding: 20px;
+  background-color: #4CAF50;;
+  color: white;
+}
+.alert1 {
+  padding: 20px;
+  background-color: #2196F3;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+
 </html>
