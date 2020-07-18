@@ -1,104 +1,199 @@
-<!doctype html>
-<html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
-  <head>
-    <title>COVID-19 Corona Tracker</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" http-equiv="X-UA-Compatible" content="IE=edge"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" name="msapplication-TileColor" content="#da532c"><meta data-n-head="ssr" name="theme-color" content="#ffffff"><meta data-n-head="ssr" property="og:site_name" content="Corona Tracker"><meta data-n-head="ssr" property="og:type" content="website"><meta data-n-head="ssr" data-hid="og-url" property="og:url" content="https://www.coronatracker.com"><meta data-n-head="ssr" data-hid="twitter-url" property="twitter:url" content="https://www.coronatracker.com"><meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes"><meta data-n-head="ssr" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="corona-tracker"><meta data-n-head="ssr" data-hid="author" name="author" content="weiseng"><meta data-n-head="ssr" data-hid="title" name="title" content="COVID-19 Corona Tracker"><meta data-n-head="ssr" data-hid="description" name="description" content="COVID-19 Corona Tracker: The only independent World Health Organization (WHO) recognized one stop platform for verified data and news."><meta data-n-head="ssr" data-hid="og-title" property="og:title" content="COVID-19 Corona Tracker"><meta data-n-head="ssr" data-hid="og-description" property="og:description" content="COVID-19 Corona Tracker: The only independent World Health Organization (WHO) recognized one stop platform for verified data and news."><meta data-n-head="ssr" data-hid="og-image" property="og:image" content="https://www.coronatracker.com/.netlify/functions/take-screenshot?type=globalStatsToday&t=1594310527339"><meta data-n-head="ssr" data-hid="og-image-width" property="og:image:width" content="1337"><meta data-n-head="ssr" data-hid="og-image-height" property="og:image:height" content="700"><meta data-n-head="ssr" data-hid="twitter-card" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" data-hid="twitter-title" property="twitter:title" content="COVID-19 Corona Tracker"><meta data-n-head="ssr" data-hid="twitter-description" property="twitter:description" content="COVID-19 Corona Tracker: The only independent World Health Organization (WHO) recognized one stop platform for verified data and news."><meta data-n-head="ssr" data-hid="twitter-image" property="twitter:image" content="https://www.coronatracker.com/.netlify/functions/take-screenshot?type=globalStatsToday&t=1594310527339"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link data-n-head="ssr" rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link data-n-head="ssr" rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link data-n-head="ssr" rel="manifest" href="/site.webmanifest"><link data-n-head="ssr" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/css/flag-icon.min.css"><link data-n-head="ssr" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link data-n-head="ssr" rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"><link data-n-head="ssr" rel="shortcut icon" href="/_nuxt/icons/icon_64.5f6a36.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie"><script data-n-head="ssr" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-name="BMC-Widget" data-id="coronatracker" data-color="#FF813F" data-position="left" data-x_margin="18" data-y_margin="18"></script><script data-n-head="ssr" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-name="BMC-Widget" data-id="coronatracker" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting. You can now buy me a coffee!" data-color="#FF813F" data-position="left" data-x_margin="18" data-y_margin="18"></script><link rel="preload" href="/_nuxt/97c006401b6df5b75818.js" as="script"><link rel="preload" href="/_nuxt/0b07261316aefa2b10a6.js" as="script"><link rel="preload" href="/_nuxt/094d235d8070e92be7b9.js" as="script"><link rel="preload" href="/_nuxt/8a4aebb698ac2b25b61e.js" as="script"><link rel="preload" href="/_nuxt/89063fcfc9ded8b76b2e.js" as="script"><link rel="preload" href="/_nuxt/7d4417714c34e62e4011.js" as="script"><style data-vue-ssr-id="38dfa7e4:0 d89ab330:0 1a65cd98:0 3191d5ad:0 932a8f60:0 6bdae85e:0 51177d47:0 6ec70812:0 900b5eb6:0 e8b999e2:0 4958dfa2:0 5afcc4f2:0">/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}a{background-color:transparent}b,strong{font-weight:bolder}code{font-family:monospace,monospace;font-size:1em}small{font-size:80%}img{border-style:none}button,input,select{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[hidden],template{display:none}dd,h1,h2,h3,p{margin:0}button{background-color:transparent;background-image:none;padding:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}ul{list-style:none;margin:0;padding:0}html{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}img{border-style:solid}input::-webkit-input-placeholder{color:#a0aec0}input::-moz-placeholder{color:#a0aec0}input:-ms-input-placeholder{color:#a0aec0}input::-ms-input-placeholder{color:#a0aec0}input::placeholder{color:#a0aec0}[role=button],button{cursor:pointer}table{border-collapse:collapse}h1,h2,h3{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}button,input,select{padding:0;line-height:inherit;color:inherit}code{font-family:Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}iframe,img,svg{display:block;vertical-align:middle}img{max-width:100%;height:auto}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.bg-white{background-color:#fff}.bg-gray-100{background-color:#f7fafc}.bg-gray-200{background-color:#edf2f7}.bg-gray-300{background-color:#e2e8f0}.bg-red-100{background-color:#fff5f5}.bg-red-200{background-color:#fed7d7}.bg-green-100{background-color:#f0fff4}.bg-green-200{background-color:#c6f6d5}.bg-teal-100{background-color:#e6fffa}.bg-blue-100{background-color:#ebf8ff}.bg-blue-500{background-color:#4299e1}.bg-primary{background-color:#108885}.hover\:bg-gray-400:hover{background-color:#cbd5e0}.hover\:bg-teal-200:hover{background-color:#b2f5ea}.hover\:bg-blue-700:hover{background-color:#2b6cb0}.hover\:bg-primary:hover{background-color:#108885}.focus\:bg-white:focus{background-color:#fff}.bg-center{background-position:50%}.bg-no-repeat{background-repeat:no-repeat}.bg-cover{background-size:cover}.border-gray-200{border-color:#edf2f7}.border-gray-400{border-color:#cbd5e0}.border-teal-500{border-color:#38b2ac}.border-blue-200{border-color:#bee3f8}.border-primary{border-color:#108885}.hover\:border-red-600:hover{border-color:#e53e3e}.focus\:border-gray-300:focus{border-color:#e2e8f0}.rounded{border-radius:.25rem}.rounded-md{border-radius:.375rem}.rounded-full{border-radius:9999px}.rounded-b-none{border-bottom-right-radius:0;border-bottom-left-radius:0}.rounded-t{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.rounded-b{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.border-solid{border-style:solid}.border-2{border-width:2px}.border{border-width:1px}.border-b-2{border-bottom-width:2px}.border-t-4{border-top-width:4px}.border-l-5{border-left-width:5px}.cursor-pointer{cursor:pointer}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.hidden{display:none}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.self-end{align-self:flex-end}.self-center{align-self:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.content-around{align-content:space-around}.flex-1{flex:1 1 0%}.flex-auto{flex:1 1 auto}.flex-none{flex:none}.float-right{float:right}.clearfix:after{content:"";display:table;clear:both}.font-sans{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.font-semibold{font-weight:600}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.h-3{height:.75rem}.h-4{height:1rem}.h-8{height:2rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-full{height:100%}.h-screen{height:100vh}.leading-none{line-height:1}.leading-tight{line-height:1.25}.leading-snug{line-height:1.375}.leading-normal{line-height:1.5}.leading-loose{line-height:2}.mx-1{margin-left:.25rem;margin-right:.25rem}.my-2{margin-top:.5rem;margin-bottom:.5rem}.mx-2{margin-left:.5rem;margin-right:.5rem}.my-3{margin-top:.75rem;margin-bottom:.75rem}.my-4{margin-top:1rem;margin-bottom:1rem}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}.my-8{margin-top:2rem;margin-bottom:2rem}.mx-auto{margin-left:auto;margin-right:auto}.-my-2{margin-top:-.5rem;margin-bottom:-.5rem}.-mx-2{margin-left:-.5rem;margin-right:-.5rem}.mt-1{margin-top:.25rem}.mr-1{margin-right:.25rem}.mb-1{margin-bottom:.25rem}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.mb-2{margin-bottom:.5rem}.ml-2{margin-left:.5rem}.mt-3{margin-top:.75rem}.mr-3{margin-right:.75rem}.mb-3{margin-bottom:.75rem}.ml-3{margin-left:.75rem}.mt-4{margin-top:1rem}.mr-4{margin-right:1rem}.mb-4{margin-bottom:1rem}.mt-5{margin-top:1.25rem}.mb-5{margin-bottom:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mb-8{margin-bottom:2rem}.mt-10{margin-top:2.5rem}.mr-20{margin-right:5rem}.mb-64{margin-bottom:16rem}.ml-auto{margin-left:auto}.-mt-2{margin-top:-.5rem}.-mb-4{margin-bottom:-1rem}.max-w-full{max-width:100%}.focus\:outline-none:focus,.outline-none{outline:0}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-1{padding-left:.25rem;padding-right:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.px-3{padding-left:.75rem;padding-right:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.pt-1{padding-top:.25rem}.pt-2{padding-top:.5rem}.pl-2{padding-left:.5rem}.pt-3{padding-top:.75rem}.pt-4{padding-top:1rem}.pb-4{padding-bottom:1rem}.pl-4{padding-left:1rem}.pt-5{padding-top:1.25rem}.pb-5{padding-bottom:1.25rem}.pb-6{padding-bottom:1.5rem}.pb-8{padding-bottom:2rem}.pl-8{padding-left:2rem}.absolute{position:absolute}.relative{position:relative}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.shadow-md{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)}.fill-current{fill:currentColor}.table-auto{table-layout:auto}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-black{color:#000}.text-white{color:#fff}.text-gray-500{color:#a0aec0}.text-gray-600{color:#718096}.text-gray-700{color:#4a5568}.text-gray-900{color:#1a202c}.text-red-600{color:#e53e3e}.text-orange-600{color:#dd6b20}.text-green-600{color:#38a169}.text-teal-900{color:#234e52}.text-blue-500{color:#4299e1}.text-blue-600{color:#3182ce}.text-primary{color:#108885}.hover\:text-white:hover{color:#fff}.hover\:text-red-600:hover{color:#e53e3e}.text-xs{font-size:.75rem}.text-sm{font-size:.875rem}.text-base{font-size:1rem}.text-lg{font-size:1.125rem}.text-xl{font-size:1.25rem}.text-2xl{font-size:1.5rem}.text-3xl{font-size:1.875rem}.text-4xl{font-size:2.25rem}.uppercase{text-transform:uppercase}.capitalize{text-transform:capitalize}.hover\:underline:hover,.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.align-middle{vertical-align:middle}.whitespace-no-wrap{white-space:nowrap}.break-words{word-wrap:break-word}.w-3{width:.75rem}.w-4{width:1rem}.w-12{width:3rem}.w-auto{width:auto}.w-1\/2{width:50%}.w-1\/3{width:33.333333%}.w-full{width:100%}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.container{margin-left:auto;margin-right:auto;padding:.5rem}@media (min-width:640px){.sm\:flex-row{flex-direction:row}.sm\:justify-around{justify-content:space-around}.sm\:mr-2{margin-right:.5rem}.sm\:text-left{text-align:left}.sm\:text-lg{font-size:1.125rem}.sm\:w-1\/2{width:50%}}@media (min-width:768px){.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:flex-row{flex-direction:row}.md\:flex-no-wrap{flex-wrap:nowrap}.md\:justify-end{justify-content:flex-end}.md\:justify-around{justify-content:space-around}.md\:mt-0{margin-top:0}.md\:text-right{text-align:right}.md\:w-1\/2{width:50%}.md\:w-1\/3{width:33.333333%}.md\:w-2\/3{width:66.666667%}.md\:w-1\/4{width:25%}.md\:w-2\/4{width:50%}.md\:w-3\/4{width:75%}.md\:w-2\/5{width:40%}.md\:w-1\/6{width:16.666667%}.md\:w-5\/6{width:83.333333%}}@media (min-width:1024px){.lg\:block{display:block}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:flex-row{flex-direction:row}.lg\:justify-around{justify-content:space-around}.lg\:mt-3{margin-top:.75rem}.lg\:min-h-screen{min-height:100vh}.lg\:text-base{font-size:1rem}.lg\:text-xl{font-size:1.25rem}.lg\:text-3xl{font-size:1.875rem}.lg\:w-1\/2{width:50%}.lg\:w-1\/3{width:33.333333%}.lg\:w-1\/4{width:25%}.lg\:w-4\/5{width:80%}.lg\:w-1\/6{width:16.666667%}.lg\:w-5\/6{width:83.333333%}}@media (min-width:1280px){.xl\:py-2{padding-top:.5rem;padding-bottom:.5rem}}
-.blink{-webkit-animation:blinker 3s linear infinite;animation:blinker 3s linear infinite}@-webkit-keyframes blinker{50%{opacity:0}}@keyframes blinker{50%{opacity:0}}main.container{padding-top:2rem}.sorter-header{cursor:pointer;border:solid #000;border-width:0 2px 2px 0;display:inline-block;padding:2px;margin-left:4px}.up-arrow{transform:rotate(-135deg);-webkit-transform:rotate(-135deg)}.down-arrow{transform:rotate(45deg);-webkit-transform:rotate(45deg);margin-bottom:2px}.pointer{cursor:pointer}
-.leaflet-popup-content{margin:13px 19px;line-height:1.4}.leaflet-popup-content p{margin:18px 0}
-.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#fff;z-index:999999}
-.app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-html{font-family:Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;font-size:16px;word-spacing:1px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;box-sizing:border-box}*,:after,:before{box-sizing:border-box;margin:0}
-.top-sticky{box-shadow:0 -4px 6px 6px #e8e8e8}nav{border-bottom:1px solid #e2e8f0}.nav-link{position:relative;transition:all .2s ease-in-out}.nav-link:hover{text-shadow:0 0 1px #108885}.nav-link:after{content:"";position:absolute;width:100%;height:4px;left:0;right:0;bottom:0;background-color:#108885;transform:scale(0);transform-origin:50% 50%;transition:all .2s ease-in-out}.nav-link:hover:after{transform:scale(1)}
-a.anchor[data-v-70f553e6]{display:block;position:relative;top:-100px;visibility:hidden}
-button[data-v-08bdd708]:focus{outline:none}.search[data-v-08bdd708]{position:relative}.list[data-v-08bdd708]{position:absolute;top:50px;max-height:300px;z-index:99}.result-link[data-v-08bdd708]{transition:background-color .25s ease-in-out}.result-link+.result-link[data-v-08bdd708]{border-top:1px solid #e2e8f0}.result-link[data-v-08bdd708]:hover{background-color:#e4e4e4}
-.pagination{justify-content:center;display:flex;padding-left:0;margin:20px 0;border-radius:4px}.pagination>li{display:inline}.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;line-height:1.42857143;text-decoration:none;color:#108885;background-color:#fff;border:1px solid #ddd;margin-left:-1px}.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-bottom-left-radius:4px;border-top-left-radius:4px}.pagination>li:last-child>a,.pagination>li:last-child>span{border-bottom-right-radius:4px;border-top-right-radius:4px}.pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover{z-index:3;color:#23527c;background-color:#eee;border-color:#ddd}.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{z-index:2;color:#fff;background-color:#108885;border-color:#108885;cursor:default}.pagination>.disabled>a,.pagination>.disabled>a:focus,.pagination>.disabled>a:hover,.pagination>.disabled>span,.pagination>.disabled>span:focus,.pagination>.disabled>span:hover{color:#777;background-color:#fff;border-color:#ddd;cursor:not-allowed}.pagination-lg>li>a,.pagination-lg>li>span{padding:10px 16px;font-size:18px;line-height:1.3333333}.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span{border-bottom-left-radius:6px;border-top-left-radius:6px}.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span{border-bottom-right-radius:6px;border-top-right-radius:6px}.pagination-sm>li>a,.pagination-sm>li>span{padding:5px 10px;font-size:12px;line-height:1.5}.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span{border-bottom-left-radius:3px;border-top-left-radius:3px}.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-bottom-right-radius:3px;border-top-right-radius:3px}.pager{padding-left:0;margin:20px 0;list-style:none;text-align:center}.pager li{display:inline}.pager li>a,.pager li>span{display:inline-block;padding:5px 14px;background-color:#fff;border:1px solid #ddd;border-radius:15px}.pager li>a:focus,.pager li>a:hover{text-decoration:none;background-color:#eee}.pager .next>a,.pager .next>span{float:right}.pager .previous>a,.pager .previous>span{float:left}.pager .disabled>a,.pager .disabled>a:focus,.pager .disabled>a:hover,.pager .disabled>span{color:#777;background-color:#fff;cursor:not-allowed}
-.loading-container[data-v-5f9925b4]{padding:25px 0;margin:auto 0}.placeholder-content[data-v-5f9925b4]{height:205px;overflow:hidden;background:#000;position:relative;-webkit-animation-duration:1.7s;animation-duration:1.7s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-name:placeholderAnimate-data-v-5f9925b4;animation-name:placeholderAnimate-data-v-5f9925b4;background:#f6f7f8;background:linear-gradient(90deg,#eee 2%,#ddd 18%,#eee 33%);background-size:1300px}.placeholder-content_item[data-v-5f9925b4]{width:100%;height:20px;position:absolute;background:#fff;z-index:2}.placeholder-content_item[data-v-5f9925b4]:after,.placeholder-content_item[data-v-5f9925b4]:before{width:inherit;height:inherit;content:"";position:absolute}.placeholder-content_item[data-v-5f9925b4]:first-child{top:0;left:0}.placeholder-content_item[data-v-5f9925b4]:nth-child(2){top:20px;width:20px;left:26%;height:90px}.placeholder-content_item[data-v-5f9925b4]:nth-child(3){top:40px;left:26%;height:12px}.placeholder-content_item[data-v-5f9925b4]:nth-child(4){top:75px;left:26%;height:12px}.placeholder-content_item[data-v-5f9925b4]:nth-child(5){top:20px;right:0;width:23%;height:20px}.placeholder-content_item[data-v-5f9925b4]:nth-child(6){top:110px;height:17px;left:0}.placeholder-content_item[data-v-5f9925b4]:nth-child(7){top:149px;height:12px;left:0}.placeholder-content_item[data-v-5f9925b4]:nth-child(8){top:183px;left:0;height:25px}@-webkit-keyframes placeholderAnimate-data-v-5f9925b4{0%{background-position:-650px 0}to{background-position:650px 0}}@keyframes placeholderAnimate-data-v-5f9925b4{0%{background-position:-650px 0}to{background-position:650px 0}}
-.bmc-button img[data-v-d2387006]{height:34px!important;width:35px!important;margin-bottom:1px!important;box-shadow:none!important;border:none!important;vertical-align:middle!important}.bmc-button[data-v-d2387006]{line-height:35px!important;height:51px!important;min-width:217px!important;display:inline-flex!important;background-color:#79d6b5!important;border-radius:5px!important;border:1px solid transparent!important;padding:7px 10px!important;font-size:28px!important;letter-spacing:.6px!important;box-shadow:0 1px 2px hsla(0,0%,74.5%,.5)!important;margin:0 auto!important;font-family:Cookie,cursive!important;box-sizing:border-box!important;transition:all .3s linear!important}.bmc-button[data-v-d2387006],.bmc-button[data-v-d2387006]:active,.bmc-button[data-v-d2387006]:focus,.bmc-button[data-v-d2387006]:hover{text-decoration:none!important;color:#fff!important;-webkit-box-shadow:0 1px 2px 2px hsla(0,0%,74.5%,.5)!important}.bmc-button[data-v-d2387006]:active,.bmc-button[data-v-d2387006]:focus,.bmc-button[data-v-d2387006]:hover{box-shadow:0 1px 2px 2px hsla(0,0%,74.5%,.5)!important;opacity:.85!important}</style>
-  </head>
-  <body>
-    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="app"><div class="container py-1"></div> <nav class="flex items-center flex-wrap bg-white text-primary"><div class="container py-2 px-2 items-center font-bold text-lg"><div class="w-full flex items-center justify-between -my-2"><div class="flex items-center cursor-pointer lg:flex" data-v-7781ab49><img src="/_nuxt/img/262cfac.png" alt="logo" class="h-12 w-auto mr-3" data-v-7781ab49> <div class="text-2xl font-bold text-black" data-v-7781ab49>
-    Corona<span class="text-red-600" data-v-7781ab49>Tracker</span></div></div> <div class="flex ml-auto mr-1" style="font-size: 0.98rem;"><a href="/" class="mx-1 px-3 py-4 hidden lg:block nav-link nuxt-link-exact-active nuxt-link-active">
-            Home
-          </a><a href="/travel-alert" class="mx-1 px-3 py-4 hidden lg:block nav-link">
-            Travel Alert
-          </a><a href="/causes" class="mx-1 px-3 py-4 hidden lg:block nav-link">
-            What is COVID-19
-          </a><a href="/prevention" class="mx-1 px-3 py-4 hidden lg:block nav-link">
-            Prevention
-          </a><a href="/analytics" class="mx-1 px-3 py-4 hidden lg:block nav-link">
-            Analytics
-          </a><a href="https://www.coronatracker.com/blog/" class="mx-1 px-3 py-4 hidden lg:block nav-link">
-            Blog
-          </a><a href="/about" class="mx-1 px-3 py-4 hidden lg:block nav-link">
-            About
-          </a> <div class="relative px-1 py-2 cursor-pointer" data-v-e306f7ac><div class="flex px-2 py-2 bg-gray-200 rounded" data-v-e306f7ac><div data-v-e306f7ac>EN</div> <div class="self-center ml-auto" data-v-e306f7ac><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current h-4 w-4" data-v-e306f7ac><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" data-v-e306f7ac></path></svg></div></div> <!----></div></div> <button id="hamburger" aria-label="Menu" class="lg:hidden flex self-center items-center px-3 py-2 border rounded text-primary border-primary hover:text-red-600 hover:border-red-600 self-end"><svg viewBox="0 0 20 20" class="fill-current h-3 w-3"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></button></div> <!----></div></nav> <main class="container" style="padding-bottom:96px;"><div class="flex flex-wrap -mx-2"><div class="w-full md:w-2/3 px-2"><div value="[object Object]" class="bg-white rounded border border-gray-400 p-4" data-v-dbe96318><div class="flex flex-wrap md:flex-no-wrap md:flex-row" data-v-dbe96318><div class="w-full md:w-2/5 h-full mr-2 align-middle relative" data-v-dbe96318><div class="mt-2 mb-2 text-sm font-semibold flex justify-between items-center" data-v-dbe96318><span class="text-red-600 uppercase" data-v-dbe96318><i class="far fa-dot-circle blink" data-v-dbe96318></i> Live</span> <div class="flex py-1" data-v-08b99dcf data-v-dbe96318><span class="text-s" data-v-08b99dcf>Share:</span> <!----></div></div> <label class="block text-s font-bold mb-2" data-v-dbe96318>Stats Overview</label> <button class="bg-gray-200 text-left font-bold py-2 px-4 rounded w-full flex focus:outline-none rounded-b-none" data-v-dbe96318><div class="flex" data-v-dbe96318><i class="text-center flex-none fas fa-globe" style="width:21px;" data-v-dbe96318></i> <span class="ml-2 leading-none" data-v-dbe96318>Global</span></div> <div class="self-center ml-auto" data-v-dbe96318><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current h-4 w-4" data-v-dbe96318><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" data-v-dbe96318></path></svg></div></button> <!----> <!----></div> <div class="flex flex-row justify-center flex justify-center w-full md:justify-end mt-5 md:mt-0" data-v-dbe96318><div class="w-1/3 flex flex-col rounded overflow-hidden shadow text-center text-red-600"><div class="h-16 pt-2 flex flex-auto items-center justify-center bg-red-100 text-base sm:text-lg lg:text-3xl font-bold font-sans"><span class="mx-2"><i class="fas fa-spinner fa-spin"></i></span></div> <div class="py-1 w-full bg-red-200 text-sm lg:text-base font-semibold font-sans"><span class="mx-2">Confirmed</span></div></div> <div class="w-1/3 mx-2 flex flex-col rounded overflow-hidden shadow text-center text-green-600"><div class="h-16 pt-2 flex flex-auto items-center justify-center bg-green-100 text-base sm:text-lg lg:text-3xl font-bold font-sans"><span class="mx-2"><i class="fas fa-spinner fa-spin"></i></span></div> <div class="py-1 w-full bg-green-200 text-sm lg:text-base font-semibold font-sans"><span class="mx-2">Recovered</span></div></div> <div class="w-1/3 flex flex-col rounded overflow-hidden shadow text-center text-gray-600"><div class="h-16 pt-2 flex flex-auto items-center justify-center bg-gray-200 text-base sm:text-lg lg:text-3xl font-bold font-sans"><span class="mx-2"><i class="fas fa-spinner fa-spin"></i></span></div> <div class="py-1 w-full bg-gray-300 text-sm lg:text-base font-semibold font-sans"><span class="mx-2">Deaths</span></div></div></div></div> <div class="block text-center md:text-right mt-6 text-blue-500 font-semibold" data-v-dbe96318><a href="/analytics" data-v-dbe96318>
-      more details
-    </a></div></div> <!----> <div class="w-full block md:hidden mt-4 mb-8"><div data-v-70f553e6><div data-v-243f6b8c data-v-70f553e6><div class="border-l-5 border-primary text-primary font-bold p-2 uppercase" data-v-243f6b8c><span class="ml-1" data-v-243f6b8c>Countries Affected</span></div> <div class="bg-gray-100" data-v-243f6b8c></div></div> <div class="my-2 font-bold text-xs text-gray-500 leading-tight" data-v-70f553e6>
-    Sources: WHO, CDC, ECDC, NHC of the PRC, JHU CSSE,
-    DXY, QQ, and various international media
-  </div> <div data-v-258eb1fa data-v-70f553e6><div class="my-2 font-bold text-xs text-blue-600 leading-tight" data-v-258eb1fa><i class="fas fa-info-circle" data-v-258eb1fa></i> Hint:
-    Click on a country for more info
-  </div></div> <table class="table-auto w-full" data-v-70f553e6><thead class="text-xs leading-tight border-b-2" data-v-70f553e6><tr data-v-70f553e6><th class="border px-2 py-2" data-v-70f553e6>
-          Country
-        </th> <th class="border px-1 py-2 pointer" data-v-70f553e6>
-          Confirmed<span class="sorter-header down-arrow" data-v-70f553e6></span></th> <th class="border px-1 py-2 pointer" data-v-70f553e6>
-          Recovered<!----></th> <th class="border px-1 py-2 pointer" data-v-70f553e6>
-          Deaths<!----></th></tr></thead> <tbody class="font-bold" data-v-70f553e6><tr data-v-70f553e6><td colspan="4" class="text-center py-12 text-gray-500 border" data-v-70f553e6><i class="fas fa-spinner fa-spin fa-2x" data-v-70f553e6></i></td></tr></tbody></table> <div class="my-2 font-bold text-xs text-gray-600 leading-tight" data-v-70f553e6>
-    * Cases identified on a cruise ship currently in Japanese territorial waters.
-    <a name="notes-on-others" class="anchor" data-v-70f553e6></a></div></div> <div class="mt-2 text-center underline text-blue-500 font-semibold"><a href="/analytics">
-            Full list here
-          </a></div></div> <div class="flex flex-col items-center search mt-4 mb-8" data-v-08bdd708><div class="flex w-full items-center rounded border border-gray-400 focus:bg-white" data-v-08bdd708><input placeholder="Search..." class="appearance-none block w-full text-gray-700 border py-3 px-4 leading-tight outline-none focus:bg-white" style="border:none" data-v-08bdd708> <button aria-label="search" class="h-12 w-12 flex items-center justify-center" data-v-08bdd708><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-primary" data-v-08bdd708><circle cx="11" cy="11" r="8" data-v-08bdd708></circle> <line x1="21" y1="21" x2="16.65" y2="16.65" data-v-08bdd708></line></svg></button></div> <!----></div> <div><div class="flex flex-wrap"><div class="w-1/2" data-v-243f6b8c><div class="border-l-5 border-primary text-primary font-bold p-2 uppercase" data-v-243f6b8c><span class="ml-1" data-v-243f6b8c>Verified News</span></div> <div class="bg-gray-100" data-v-243f6b8c></div></div> <div class="w-1/2 flex flex-wrap mt-2" style="justify-content:flex-end; align-items:center"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcoronatracker%2F&width=174&layout=button_count&action=like&size=large&share=true&height=46&appId" width="174" height="46" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" style="border:none;overflow:hidden"></iframe></div></div> <div data-v-5d092d34><div class="py-4 flex flex-wrap" data-v-5d092d34><div class="w-full md:w-5/6" data-v-5d092d34><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary bg-primary rounded-full px-5 py-2 text-sm text-white font-semibold" data-v-5d092d34>
-          English <i class="fas fa-times ml-1" data-v-5d092d34></i></button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          Bahasa Melayu
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          简体中文
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          繁體中文
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          日本語
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          Bahasa Indonesia
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          Tiếng Việt
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          ภาษาไทย
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          코리언
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          Italiano
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          Deutsch
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          Nederlands
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          தமிழ்
-        </button></span><span data-v-5d092d34><button class="inline-block mt-2 mr-2 border-solid border-2 border-primary rounded-full px-5 py-2 text-sm text-primary font-semibold" data-v-5d092d34>
-          हिन्दी
-        </button></span></div> <div class="w-full md:w-1/6 flex justify-end" data-v-5d092d34><button class="text-gray-600 underline px-3 py-1 text-base font-semibold" data-v-5d092d34>
-        Clear All
-      </button></div></div></div> <div data-v-5f9925b4><div class="my-8 mx-auto text-center" data-v-5f9925b4>
-        No result
-      </div></div></div></div> <div class="w-full md:w-1/3 px-2"><div class="hidden md:block"><div data-v-70f553e6><div data-v-243f6b8c data-v-70f553e6><div class="border-l-5 border-primary text-primary font-bold p-2 uppercase" data-v-243f6b8c><span class="ml-1" data-v-243f6b8c>Countries Affected</span></div> <div class="bg-gray-100" data-v-243f6b8c></div></div> <div class="my-2 font-bold text-xs text-gray-500 leading-tight" data-v-70f553e6>
-    Sources: WHO, CDC, ECDC, NHC of the PRC, JHU CSSE,
-    DXY, QQ, and various international media
-  </div> <div data-v-258eb1fa data-v-70f553e6><div class="my-2 font-bold text-xs text-blue-600 leading-tight" data-v-258eb1fa><i class="fas fa-info-circle" data-v-258eb1fa></i> Hint:
-    Click on a country for more info
-  </div></div> <table class="table-auto w-full" data-v-70f553e6><thead class="text-xs leading-tight border-b-2" data-v-70f553e6><tr data-v-70f553e6><th class="border px-2 py-2" data-v-70f553e6>
-          Country
-        </th> <th class="border px-1 py-2 pointer" data-v-70f553e6>
-          Confirmed<span class="sorter-header down-arrow" data-v-70f553e6></span></th> <th class="border px-1 py-2 pointer" data-v-70f553e6>
-          Recovered<!----></th> <th class="border px-1 py-2 pointer" data-v-70f553e6>
-          Deaths<!----></th></tr></thead> <tbody class="font-bold" data-v-70f553e6><tr data-v-70f553e6><td colspan="4" class="text-center py-12 text-gray-500 border" data-v-70f553e6><i class="fas fa-spinner fa-spin fa-2x" data-v-70f553e6></i></td></tr></tbody></table> <div class="my-2 font-bold text-xs text-gray-600 leading-tight" data-v-70f553e6>
-    * Cases identified on a cruise ship currently in Japanese territorial waters.
-    <a name="notes-on-others" class="anchor" data-v-70f553e6></a></div></div> <div class="mt-2 text-center underline text-blue-500 font-semibold"><a href="/analytics">
-            Full list here
-          </a></div></div> <div class="my-4"><div data-v-d1a0da40><div class="bg-blue-100 rounded border border-blue-200 p-3" data-v-d1a0da40><div class="flex mb-4" data-v-d1a0da40><img src="/_nuxt/img/a219938.png" alt="health" class="h-full w-auto" data-v-d1a0da40> <div class="flex flex-wrap ml-3 content-around" data-v-d1a0da40><div class="font-bold text-md" data-v-d1a0da40><span class="text-green-600" data-v-d1a0da40>Steps</span>
-          to prevent coronavirus
-        </div> <div class="text-gray-600 text-sm" data-v-d1a0da40>
-          Read and share this with others
-        </div></div></div> <a href="/prevention" class="block py-3 w-full bg-blue-500 rounded text-white text-center" data-v-d1a0da40>
-      Learn how
-    </a></div></div></div> <div class="my-4"><div class="text-center mt-5" data-v-d2387006><a target="_blank" href="https://www.buymeacoffee.com/coronatracker" class="bmc-button" data-v-d2387006><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" data-v-d2387006> <span style="margin-left:15px;font-size:28px !important;" data-v-d2387006>
-      Buy me a coffee
-    </span></a></div></div></div></div></main></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],fetch:[],error:null,serverRendered:true,routePath:"\u002F"};</script><script src="/_nuxt/97c006401b6df5b75818.js" defer></script><script src="/_nuxt/89063fcfc9ded8b76b2e.js" defer></script><script src="/_nuxt/7d4417714c34e62e4011.js" defer></script><script src="/_nuxt/0b07261316aefa2b10a6.js" defer></script><script src="/_nuxt/094d235d8070e92be7b9.js" defer></script><script src="/_nuxt/8a4aebb698ac2b25b61e.js" defer></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="https://cdn.iconscout.com/icon/free/png-256/j-characters-character-alphabet-letter-36045.png">
+	<link rel="stylesheet" 
+href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<title>Alternativas a Facebook</title>
+</head>
+<style type="text/css">
+	body
+	{
+		margin: 10px;
+		padding: 0px;
+	}
+	div#post1
+	{
+		margin-bottom: 10%;
+	}
+	div#time-post
+	{
+		margin-bottom: 1%;
+	}
+	div#user-post
+	{
+		margin-bottom: -2%;
+	}
+	div#share
+	{
+		border: 3px black solid;
+		width: 300px;
+		height: 200px;
+		border-radius: 10%;
+	}
+</style>
+<body>
+	
+<div id="logo" style="background: black;">
+	<a href="" style="margin-left: 500px;
+		background: darkorange;
+		color: black;
+		font-size: 25px; text-decoration: none;">JAVM</a>
+</div>
+	<div id="tittle-post">
+<h3 style="text-align: center;">Alternativas a Facebook</h3>
+<div id="user-post">
+	<h4 style="margin-bottom: -2%;">Pubicador por:</h4>
+	<a href="file:///C:/Users/HOGAR/Desktop/Projects%20JAVM/index/Userprofile.html" style="text-decoration: none; margin-left: 120px;"><img style="border-radius: 50%; height: 25px; height: 25px; border: 2px black solid;" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png">Javier V.</a>
+	<div id="time-post" style="margin-bottom: 1%;">
+	<h5 style="color: grey; margin-left: 20px;"><i style="color: grey; margin-left: 10px; font-size: 20px;" class="far fa-clock"></i>18-07-2020 14:00</h5>
+	</div>
+</div>
+</div>
+<div id="post1">
+ 	<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg" hspace="5" vspace="5" style="float: right; height: 150px; width: 210px;"/>
+ 	<h4>Vk</h4>
+ VK, ​ es una red social creada por Pável Dúrov y conocida internacionalmente como VK. Pável, que estudió filología en la Universidad Estatal de San Petersburgo, creó la web de la universidad y un foro sobre ella con la ayuda de su hermano Nikolái.
+ <div id="red-ejemplo1">
+ 		<img style="width: 300px; height: 200px; margin-bottom: 3%; margin-left: 10px;" src="https://cdn.dribbble.com/users/2638437/screenshots/5946508/vkontakte_concept.jpg">
+ 	</div>
+<div id="red-ejemplo2">
+ 		<img style="width: 300px; height: 200px; margin-left: 10px;" src="https://www.conclusion.com.ar/wp-content/uploads/2019/03/interfaz-de-VK.jpg">
+
+ 	</div>
+ </div>
+
+ <div id="post2">
+ 	<img src="https://androidzeal.com/wp-content/uploads/2019/07/Pinterest.jpg" hspace="5" vspace="5" style="float: right; height: 150px; width: 210px;"/>
+ 	<h4>Pinterest</h4>
+ 	Pinterest es una plataforma que permite a los usuarios crear y administrar, en tableros personales temáticos, colecciones de imágenes como eventos, intereses, aficiones y mucho más. Los usuarios pueden buscar otros pinboards, "repinchar" imágenes para sus propias colecciones.
+<div id="red-ejemplo1">
+ 		<img style="width: 300px; height: 200px; margin-bottom: 3%; margin-left: 10px;" src="https://newsroom.pinterest.com/sites/default/files/inline-images/blog-post-library-01.jpg">
+ 	</div>
+<div id="red-ejemplo2">
+ 		<img style="width: 300px; height: 200px; margin-left: 10px;" src="https://s.pinimg.com/images/facebook_share_image.png">
+
+ 	</div>
+ </div>
+
+
+<div id="post3">
+<img src="https://st.deviantart.net/minish/main/logo/card_black_large.png" hspace="5" vspace="5" style="float: left; height: 150px; width: 210px;"/>
+<h4>DeviantArt</h4>
+DeviantArt es un sitio web que agrupa a una comunidad internacional de artistas en la red. DeviantART es un espacio virtual en el que cada usuario puede mostrar su arte y aprovechar las posibilidades de la red para someterlo a los comentarios y críticas de otros artistas miembros de la comunidad dA.
+<div id="red-ejemplo1">
+ 		<img style="width: 300px; height: 200px; margin-bottom: 3%; margin-left: 10px;" src="https://iphoneate.com/wp-content/uploads/2014/12/devianArt-para-iPhone.png">
+ 	</div>
+<div id="red-ejemplo2">
+ 		<img style="width: 300px; height: 200px; margin-left: 10px;" src="https://i.blogs.es/101cde/nuevo-deviantart/450_1000.jpg">
+
+ 	</div>
+ </div> 
+
+ <div id="post4" style="margin-bottom: 10%;">
+ 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Ok_new_logo.png/245px-Ok_new_logo.png" hspace="5" vspace="5" style="float: left; height: 150px; width: 210px;"/>
+ 	<h4>Odnoklassniki</h4>
+ 	Odnoklassniki es una red social rusa propiedad de Mail.Ru Group. A principios de 2018, se declaró el tercer sitio más popular en Armenia, el cuarto en Rusia y Azerbaiyán, el quinto en Kazajistán, el séptimo en Ucrania, el 27º en el mundo. El proyecto se inició el 26 de marzo de 2006.
+ 	<div id="red-ejemplo1">
+ 		<img style="width: 100px; height: 200px; margin-bottom: 3%; margin-left: 10px;" src="https://is1-ssl.mzstatic.com/image/thumb/Purple1/v4/d0/b4/53/d0b453b3-712d-c93b-a619-a1f6605051b3/source/750x750bb.jpeg">
+ 	</div>
+<div id="red-ejemplo2">
+ 		<img style="width: 200px; height: 200px; margin-left: 10px;" src="https://miro.medium.com/max/1000/0*L9t0YcF2had6C2GW.jpg">
+
+ 	</div>
+ </div>
+
+ <div id="post5" style="margin-bottom: 10%;">
+ 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Social_Network_Ello_Logo.svg/1200px-Social_Network_Ello_Logo.svg.png" hspace="5" vspace="5" style="float: right; height: 150px; width: 210px;"/>
+ 	<h4>Ello</h4>
+ 	Ello es un servicio de red social sin publicidad creado por Paul Budnitz y Todd Berger​ en marzo de 2014.​ En octubre de 2014 se reorganizó como una corporación benéfica.
+ 	 	<div id="red-ejemplo1">
+ 		<img style="width: 300px; height: 200px; margin-bottom: 3%; margin-left: 10px;" src="https://elandroidelibre.elespanol.com/wp-content/uploads/2018/02/Ello.jpg">
+ 	</div>
+<div id="red-ejemplo2">
+ 		<img style="width: 200px; height: 200px; margin-left: 10px;" src="https://ep01.epimg.net/verne/imagenes/2014/09/27/articulo/1411772700_000199_1417380320_noticia_normal.jpg">
+
+ 	</div>
+
+ </div>
+
+ <div id="post6" style="margin-bottom: 10%;">
+ 	<img src="https://res-4.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1427023357/fpnr9ajv2hxci7mr8xqx.png" hspace="5" vspace="5" style="float: left; height: 150px; width: 210px;"/>
+ 	<h4>Friendica</h4>
+ 	Friendica es una red social distribuida basada en software libre y de código abierto. Enfatiza los extensos ajustes de privacidad, y la sencilla instalación. Su objetivo es ser capaz de federar con la mayor cantidad posible de redes sociales.
+
+ 	<div id="red-ejemplo1">
+ 		<img style="width: 300px; height: 200px; margin-bottom: 3%; margin-left: 10px;" src="https://upload.wikimedia.org/wikipedia/en/c/ce/Screenshot_of_Friendica.jpg">
+ 	</div>
+
+
+<div id="red-ejemplo2">
+ 		<img style="width: 200px; height: 200px; margin-left: 10px;" src="https://cdn1.arimetrics.com/wp-content/uploads/2020/01/friendica1.png">
+
+ 	</div>
+ </div>
+
+ <div id="post7" style="margin-bottom: 10%;">
+ 	<img src="https://eltarrodelosidiomas.com/wp-content/uploads/2020/03/Screenshot0509.png" hspace="5" vspace="5" style="float: right; height: 150px; width: 210px;"/>
+ 	<h4>MeWe</h4>
+ 	WeMe es un servicio de red social sin publicidad creado para el libre ocio y para compartir los gustos de las personas (música, deportes, estudio, etc) 
+ 	<div id="red-ejemplo1">
+ 		<img style="width: 300px; height: 200px; margin-bottom: 3%; margin-left: 10px;" src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/04/26124001/MeWE.jpg">
+ 	</div>
+<div id="red-ejemplo2">
+ 		<img style="width: 200px; height: 200px; margin-left: 10px;" src="	https://www.batiburrillo.net/wp-content/uploads/2019/03/Mewe-moviles.jpg">
+
+ 	</div>
+ 	
+
+
+ </div>
+
+<div id="copy-right" style="margin-bottom: 3%;">
+	<header style="background: black; color: darkorange; text-align: center; font-size: 20px;">JAVM 2020 &copy</header>
+</div>
+
+
+<div id="share" style="margin-bottom: 3%; margin-left: 5px;">
+		<h5 style="text-align: center; margin-bottom: -2%; margin-bottom: 3%;">Compartir en:</h5>
+		<div id="share-red">
+			<div id="facebook" style="margin-left: 5px; margin-bottom: 2%;">
+	<img style="width: 40px; height: 40px;" src="https://www.muypymes.com/wp-content/uploads/2018/03/facebook-itunesapple.jpg">
+	<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.google.com/search?q=DeviantArt%26source=lmns%26bih=573%26biw=1280%26client=firefox-b-d%26hl=es%26ved=2ahUKEwi7sdrDqtfqAhX8bDABHTw7B70Q_AUoAHoECAEQAA">Share on Facebook</a>
+</div>
+
+
+<div id="twitter" style="margin-left: 5px; margin-bottom: 2%;">
+	<img style="width: 40px; height: 40px;" src="https://serv1.raiolanetworks.es/blog/wp-content/uploads/twitterlogodown.png">
+	<a href="https://twitter.com/intent/tweet?text=https%3A//fontawesome.com/icons/code?style=solid">Share on Twitter</a>
+</div>
+
+<div id="copy-link" style="margin-left: 5px;">
+	<i class="fas fa-code" style="font-size: 20px;"></i>
+	<input type="text" value="https://www.rapidtables.com/web/html/html-codes/html-code-copyright.html" id="myInput">
+<button onclick="myFunction()">Copy link</button>
+
+
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+</div>
+
+
+		</div>
+	</div>
+
+ </body>
 </html>
+
+
+
+
+
